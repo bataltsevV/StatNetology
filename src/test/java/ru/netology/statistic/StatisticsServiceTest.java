@@ -29,4 +29,16 @@ public class StatisticsServiceTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    void findMaxNull() {
+        StatisticsService service = new StatisticsService();
+
+        long[] incomesInBillions = {0};
+        long expected = 0;
+
+        long actual = service.findMax(incomesInBillions);
+
+        assertEquals(expected, actual);
+    }
 }
