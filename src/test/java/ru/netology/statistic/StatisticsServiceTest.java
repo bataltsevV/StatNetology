@@ -22,20 +22,8 @@ public class StatisticsServiceTest {
     void findMaxToo() {
         StatisticsService service = new StatisticsService();
 
-        long[] incomesInBillions = {12, 12, 12, 12, 12, 12, 12};
+        long[] incomesInBillions = {1, 12, 12, 12, 12, 12, 12};
         long expected = 12;
-
-        long actual = service.findMax(incomesInBillions);
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void findMaxNull() {
-        StatisticsService service = new StatisticsService();
-
-        long[] incomesInBillions = {0};
-        long expected = 0;
 
         long actual = service.findMax(incomesInBillions);
 
